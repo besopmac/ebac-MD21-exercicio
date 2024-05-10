@@ -1,13 +1,32 @@
-$bgColor: green;
+@use 'variables';
 
-body {
-  background-color: $bgColor;
+@font-face {
+  font-family: NetflixSans;
+  src: url('../../assets/fonts/netflix-sans-light.woff2');
+  font-weight: 200;
+}
+
+@font-face {
+  font-family: NetflixSans;
+  src: url('../../assets/fonts/netflix-sans-medium.woff2');
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: NetflixSans;
+  src: url('../../assets/fonts/netflix-sans-bold.woff2');
+  font-weight: 700;
 }
 
 * {
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
-  font-family: Avenir, sans-serif;
   list-style: none;
+  box-sizing: border-box;
+  font-family: NetflixSans;
+}
+
+body {
+  color: variables.$white;
+  background-color: variables.$black;
 }
