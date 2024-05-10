@@ -1,4 +1,7 @@
 @use 'variables';
+@use 'hero';
+@use 'header';
+@use 'footer';
 
 @font-face {
   font-family: NetflixSans;
@@ -30,3 +33,28 @@ body {
   color: variables.$white;
   background-color: variables.$black;
 }
+
+@mixin text($fontSize: 16px) {
+  font-size: $fontSize;
+  color: variables.$white;
+  line-height: $fontSize + 10px;
+}
+
+@mixin title($fontSize: 28px) {
+  @include text($fontSize);
+  color: variables.$white;
+}
+
+.text {}
+
+.text--big {}
+
+.text--small {}
+
+.title {}
+
+.title--big {}
+
+.title--small {}
+
+.button {}
