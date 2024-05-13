@@ -57,4 +57,14 @@ body {
 
 .title--small {}
 
+.link-text {
+  @include text(14px);
+  text-decoration: none;
+  font-weight: 200;
+
+  &--active {
+    font-weight: 700;
+  }
+}
+
 .button {}

@@ -1,0 +1,35 @@
+@use 'variables';
+
+.header {
+  top: 0;
+  z-index: 1;
+  height: auto;
+  position: sticky;
+  min-height: 70px;
+
+  &__container {
+    display: flex;
+    padding: 0 4%;
+    min-height: 70px;
+    align-items: center;
+  
+    @media (max-width: 768px) {}
+  }
+
+  &__logo {
+    margin: 0;
+    width: 100%;
+    max-width: 92.5px;
+    margin-right: 25px;
+
+    @media (max-width: 768px) {}
+  }
+
+  &__links {
+    display: flex;
+
+    &__item {
+      margin-left: 20px;  
+    }
+  }
+}
