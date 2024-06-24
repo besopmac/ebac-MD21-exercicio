@@ -2,6 +2,7 @@
 @use 'hero';
 @use 'header';
 @use 'footer';
+@use 'content';
 
 @font-face {
   font-family: NetflixSans;
@@ -37,7 +38,7 @@ body {
 @mixin text($fontSize: 16px) {
   font-size: $fontSize;
   color: variables.$white;
-  line-height: $fontSize + 10px;
+  line-height: $fontSize + 8px;
 }
 
 @mixin title($fontSize: 28px) {
@@ -45,17 +46,45 @@ body {
   color: variables.$white;
 }
 
-.text {}
+.text--big {
+  @include text(22px);
 
-.text--big {}
+  @media (max-width: 768px)  {
+    @include text(15px);
+  }
+}
 
-.text--small {}
+.text--small {
+  @include text(12px);
 
-.title {}
+  @media (max-width: 768px)  {
+    @include text(11px);
+  }
+}
 
-.title--big {}
+.title {
+  @include title;
 
-.title--small {}
+  @media (max-width: 768px)  {
+    @include title(24px);
+  }
+}
+
+.title--big {
+  @include title(44px);
+
+  @media (max-width: 768px)  {
+    @include title(26px);
+  }
+}
+
+.title--small {
+  @include title(28px);
+
+  @media (max-width: 768px)  {
+    @include title(22px);
+  }
+}
 
 .link-text {
   @include text(14px);
@@ -67,4 +96,27 @@ body {
   }
 }
 
-.button {}
+.button {
+  gap: 16px;
+  display: flex;
+  font-size: 1.5rem;
+  padding: 1rem 2rem;
+  border-radius: 4px;
+  align-items: center;
+  color: variables.$lightBlack;
+  background-color: variables.$white;
+  transition: background-color .5s ease;
+
+  &:hover {
+    background-color: rgba(variables.$white, 0.5);
+  }
+
+  &--info {
+    color: variables.$lightBlack;
+    background-color: rgba(variables.$gray, 0.7);
+    
+    &:hover {
+      background-color: rgba(variables.$gray, 0.5);
+    }
+  }
+}
