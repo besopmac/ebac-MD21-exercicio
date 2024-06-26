@@ -1,0 +1,34 @@
+@use 'variables';
+
+.content {
+  &__title {
+    padding-bottom: 1rem;
+    padding-left: variables.$sliderPadding;
+  }
+
+  &__container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+
+  &__slider {
+    display: flex;
+    transform: translateX(0%);
+    width: calc(100% - 2 * variables.$sliderPadding);
+
+    & > img {
+      flex: 0 0 25%;
+      max-width: 25%;
+      padding: .25rem;
+      aspect-ratio: 16 / 9;
+    }
+  }
+
+  &__handle {
+    width: variables.$sliderPadding;
+    background-color: rgba(variables.$black, 0.5);
+    z-index: 10;
+    margin: .25rem 0;
+  }
+}
