@@ -31,7 +31,10 @@
     position: absolute;
     flex-direction: column;
     
-    @media (max-width: 768px) {}
+    @media (max-width: 768px) {
+      width: 100%;
+      bottom: 25%;
+    }
   }
 
   &__title {
@@ -48,7 +51,9 @@
     display: flex;
     margin-top: 1.5vw;
     white-space: nowrap;
-
-    @media (max-width: 768px) {}
+  }
+  
+  @media (max-width: 768px) {
+    background-position: center;
   }
 }

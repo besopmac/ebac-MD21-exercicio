@@ -31,6 +31,7 @@
 }
 
 body {
+  padding-bottom: 5rem;
   color: variables.$white;
   background-color: variables.$black;
 }
@@ -119,5 +120,10 @@ body {
     &:hover {
       background-color: rgba(variables.$gray, 0.5);
     }
+  }
+
+  @media (max-width: 768px) {
+    font-size: 1.2rem;
+    padding: .75em 1.5em;
   }
 }
